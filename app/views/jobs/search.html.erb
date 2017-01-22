@@ -1,6 +1,9 @@
 
 
 
+
+
+
 <div class="dropdown clearfix pull-right">
     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
       排序
@@ -36,7 +39,7 @@
         <% @jobs.each do |job| %>
         <tr>
             <td>
-                <%= link_to(job.title, job_path(job)) %>
+      <%= link_to(render_highlight_content(job,@query_string),job_path(job)) %>
             </td>
             <td>
                 <%= job.city %>
